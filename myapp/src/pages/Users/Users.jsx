@@ -1,11 +1,11 @@
 import React ,{useState,useContext}from 'react'
 import'./Users.scss'
 import About from '../About/About';
-import { useGlobalContext } from '../../components/Context/CounterContext';
+import { myCounterContext} from '../../components/Context/CounterContext';
 
 function Users() {
   
-   const { count, increment, decrement } = useGlobalContext();
+   const { count, increment, decrement } = useContext(myCounterContext);
   const[username,setUsername]=useState('');
   const [isActive,setActive] =useState(false);
   const changeUsername =(e)=>{

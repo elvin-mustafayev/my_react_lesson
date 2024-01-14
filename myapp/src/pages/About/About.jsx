@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './About.scss'
-import {useGlobalContext}  from '../../components/Context/CounterContext';
+import {myCounterContext}  from '../../components/Context/CounterContext';
 function About() {
- const { count, increment, decrement } = useGlobalContext();
+ const { count, increment, decrement } = useContext(myCounterContext);
 
     return(
         <div>About
